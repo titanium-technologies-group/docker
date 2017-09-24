@@ -11,8 +11,6 @@ Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 * awscli
 * ecs-deploy
 * kubectl
-* php-cs-fixer
-* composer-update
 
 ## Configuration
 

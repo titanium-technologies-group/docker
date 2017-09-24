@@ -19,7 +19,7 @@ stages:
 job_test_codestyle:
     stage: test
     script:
-      - php-cs-fixer fix --dry-run --diff
+      - docker run -v `pwd`:/app rakshazi/php-cs-fixer fix --dry-run --diff
     tags:
       - docker
 
@@ -31,7 +31,7 @@ job_build:
     before_script:
         - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     script:
-        - composer-update
+        - docker run -i -v `pwd`:/app composer update --no-dev --ignore-platform-reqs --no-interaction --no-progress -a -d /app
         - docker build -t $IMAGE_APP .
         - docker tag $IMAGE_APP $IMAGE_APP_VERSION
         - docker push $IMAGE_APP
