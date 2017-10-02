@@ -25,7 +25,7 @@ login(){
         show_help
         exit 1
     fi
-    ssh $TAGET_HOST docker login -u $3 -p $4 $5
+    ssh $TARGET_HOST "docker login -u $3 -p $4 $5"
 }
 
 upload(){

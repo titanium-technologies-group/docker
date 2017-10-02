@@ -4,7 +4,7 @@ main() {
         exit 1
     fi
     mkdir -p ~/.ssh
-    echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    echo -e "Host *\n\tStrictHostKeyChecking no" > ~/.ssh/config
     echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
     chmod 600 ~/.ssh/id_rsa
     eval $(ssh-agent -s)
