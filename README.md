@@ -9,9 +9,9 @@ Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 * openssh-client
 * docker-compose
 * awscli
-* ecs-deploy
 * git
 * cibu
+* jq
 * npm-install (NOTE: requires DinD)
 
 ## ENV vars
