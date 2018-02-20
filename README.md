@@ -1,4 +1,4 @@
-# tico/docker
+# tico/docker [![Docker Pulls](https://img.shields.io/docker/pulls/tico/docker.svg?style=for-the-badge)](https://hub.docker.com/r/tico/docker/)
 
 Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 
