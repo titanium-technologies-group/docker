@@ -13,6 +13,7 @@ Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 * cibu
 * jq
 * npm-install (NOTE: requires DinD)
+* composer-install (NOTE: requires DinD)
 * php-cs-fixer (NOTE: requires DinD)
 * unused-scanner (NOTE: requires DinD)
 * security-checker (NOTE: requires DinD)
