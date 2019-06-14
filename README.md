@@ -4,19 +4,20 @@ Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 
 ## Pre-installed tools
 
-* curl
-* pip
-* openssh-client
-* docker-compose
 * awscli
-* git
 * cibu
+* composer-install (NOTE: requires DinD)
+* curl
+* docker-compose
+* git
 * jq
 * npm-install (NOTE: requires DinD)
-* composer-install (NOTE: requires DinD)
+* openssh-client
 * php-cs-fixer (NOTE: requires DinD)
-* unused-scanner (NOTE: requires DinD)
+* pip
 * security-checker (NOTE: requires DinD)
+* sentry-cli
+* unused-scanner (NOTE: requires DinD)
 
 ## ENV vars
 
