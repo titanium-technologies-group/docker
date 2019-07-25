@@ -6,7 +6,7 @@ ENV NODE_LOGLEVEL error
 ADD https://github.com/titanium-codes/cibu/archive/master.zip /tmp/cibu.zip
 ADD https://downloads.sentry-cdn.com/sentry-cli/1.44.4/sentry-cli-Linux-x86_64 /usr/local/bin/sentry-cli
 RUN apk --no-cache add curl openssh-client git jq bash py-pip build-base openssl-dev libffi-dev python2-dev && \
-    pip install docker-compose awscli s3cmd && \
+    pip install docker-compose awscli s3cmd ansible && \
     printf "#!/bin/sh\ndocker run --rm -t -v \$PWD:/app --workdir /app -e NPM_CONFIG_LOGLEVEL=\$NODE_LOGLEVEL node:\$NODE_VERSION npm install \$@" > /usr/local/bin/npm-install && \
     printf "#!/bin/sh\ndocker run --rm -t -v \$PWD:/app --workdir /app -e NPM_CONFIG_LOGLEVEL=\$NODE_LOGLEVEL node:\$NODE_VERSION npm \$@" > /usr/local/bin/npm && \
     printf "#!/bin/sh\ndocker run --rm -v \$PWD:/app tico/composer install --no-dev --ignore-platform-reqs --no-ansi --no-interaction --no-progress --no-scripts -a -d /app" > /usr/local/bin/composer-install && \
