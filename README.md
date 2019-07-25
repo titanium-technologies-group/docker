@@ -4,19 +4,20 @@ Special Docker in Docker image for Gitlab CI. Based on `docker:stable`
 
 ## Pre-installed tools
 
+* ansible
 * awscli
-* cibu
-* composer-install (NOTE: requires DinD)
+* [cibu](https://github.com/titanium-codes/cibu)
 * curl
 * docker-compose
 * git
 * jq
-* npm-install (NOTE: requires DinD)
 * openssh-client
-* php-cs-fixer (NOTE: requires DinD)
 * pip
-* security-checker (NOTE: requires DinD)
 * sentry-cli
+* composer-install (NOTE: requires DinD)
+* npm-install (NOTE: requires DinD)
+* php-cs-fixer (NOTE: requires DinD)
+* security-checker (NOTE: requires DinD)
 * unused-scanner (NOTE: requires DinD)
 
 ## ENV vars
